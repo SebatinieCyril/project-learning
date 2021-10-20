@@ -2,15 +2,20 @@
 <html>
 <head>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-
+<div class="add-log-button-div"></div>
 <div>
-		   
-                    <button class="button log-out" type="button" onclick="goBack()" value="submit">Log Out</button>
+           
+    <button class=" log-button" type="button" onclick="goBack()" value="submit"><a class="goback" href="login2.html">Logout</a></button>
+    <button class=" add-button" type="button" onclick="goBack()" value="submit"><a href="emp.html">Add Details</a></button>               
 </div>
-
 <style>
 * {
   box-sizing: border-box;
+}
+.add-log-button-div{
+    
+    margin-top: 30px;
+    height: 20px;
 }
 
 #customers {
@@ -35,7 +40,7 @@
   background-color: #00ced1;
   color: black;
 }
-.button{
+.log-button{
     position:absolute;top:0;right:0;
     height: 30px;
     width: 120px;
@@ -47,7 +52,18 @@
     border:none;
     border-radius: 7px;
 }
-
+.add-button{
+    text-align:center;
+    height: 30px;
+    width: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 120%;
+    font-weight: bold;
+    color: black;
+    background-color: #00ced1;
+    border:none;
+    border-radius: 7px;
+}
 </style>
 </head>
 <body>
@@ -95,9 +111,73 @@
     <td>ouseph.josey@aspire.com</td>
     <td>10/05/2010</td>
   </tr>
+  <tr>
+    <td>ACE3304</td>
+    <td>Akshara S</td>
+    <td>11/02/1998</td>
+    <td>7898587548</td>
+    <td>akshara.s@aspire.com</td>
+    <td>10/06/2014</td>
+  </tr> 
+  <tr>
+    <td>ACE1875</td>
+    <td>Sam George</td>
+    <td>17/12/1990</td>
+    <td>7978426589</td>
+    <td>sam.george@aspire.com</td>
+    <td>10/06/2010</td>
+  </tr> 
+  <tr>
+    <td>ACE9969</td>
+    <td>June Mathew</td>
+    <td>27/10/1997</td>
+    <td>9878485785</td>
+    <td>june.mathew@aspire.com</td>
+    <td>10/06/2016</td>
+  </tr> 
+  <tr>
+    <td>ACE1739</td>
+    <td>Kaira Mary</td>
+    <td>30/01/1993</td>
+    <td>7902248969</td>
+    <td>kaira.mary@aspire.com</td>
+    <td>10/06/2017</td>
+  </tr> 
+  <tr>
+    <td>ACE1425</td>
+    <td>Jacob Scaria</td>
+    <td>08/06/1998</td>
+    <td>9874875874</td>
+    <td>jacob.scaria@aspire.com</td>
+    <td>10/06/2016</td>
+  </tr> 
+  <tr>
+    <td>ACE9987</td>
+    <td>Amalda K.G</td>
+    <td>28/03/1998</td>
+    <td>9748585964</td>
+    <td>amalda.kg@aspire.com</td>
+    <td>10/06/2020</td>
+  </tr> 
+  <tr>
+    <td>ACE4178</td>
+    <td>Pavan Thomas</td>
+    <td>01/06/1995</td>
+    <td>7847963625</td>
+    <td>pavan.thomas@aspire.com</td>
+    <td>10/06/2018</td>
+  </tr> 
+  <tr>
+    <td>ACE0789</td>
+    <td>Jerone James</td>
+    <td>20/08/1990</td>
+    <td>7698747858</td>
+    <td>jerone.jamesk@aspire.com</td>
+    <td>10/06/2012</td>
+  </tr> 
 </table>
 <script>
-	function myFunction() {
+    function myFunction() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
@@ -117,8 +197,7 @@
       }
     }
   }
+}
 </script>
 </body>
 </html>
-
-
