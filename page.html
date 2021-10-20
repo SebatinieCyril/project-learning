@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<div>
+		   
+                    <button class="button log-out" type="button" onclick="goBack()" value="submit">Log Out</button>
+</div>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #00ced1;
+  color: black;
+}
+.button{
+    position:absolute;top:0;right:0;
+    height: 30px;
+    width: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 120%;
+    font-weight: bold;
+    color: black;
+    background-color: #00ced1;
+    border:none;
+    border-radius: 7px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Employee Table</h1>
+
+<table id="customers">
+  <tr>
+    <th>ACE ID</th>
+    <th>Name</th>
+    <th>DOB</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>DOJ</th>
+  </tr>
+  <tr>
+    <td>ACE0148</td>
+    <td>Maria MK</td>
+    <td>10/06/1994</td>
+    <td>7861361934</td>
+    <td>maria.mk@aspire.com</td>
+    <td>10/06/2014</td>
+  </tr>  
+  <tr>
+    <td>ACE8310</td>
+    <td>Ajay Krishnan </td>
+    <td>18/01/1998</td>
+    <td>9878267181</td>
+    <td>ajaykrishnan881@aspire.com</td>
+    <td>10/06/2020</td>
+  </tr>  
+  <tr>
+    <td>ACE8971</td>
+    <td>Kristina Anna</td>
+    <td>27/04/1999</td>
+    <td>9347198481</td>
+    <td>kristina.ann@aspire.com</td>
+    <td>10/06/2020</td>
+  </tr>
+  <tr>
+    <td>ACE6901</td>
+    <td>Ouseph Josey</td>
+    <td>01/01/1989</td>
+    <td>9447263993</td>
+    <td>ouseph.josey@aspire.com</td>
+    <td>10/05/2010</td>
+  </tr>
+</table>
+<script>
+	function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("customers");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+</script>
+</body>
+</html>
+
+
